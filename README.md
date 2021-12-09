@@ -15,6 +15,8 @@ dokku storage:mount grafana /apps/grafana:/var/lib/grafana
 
 cd /apps && mkdir ./grafana && chown nobody grafana
 
+dokku network:set grafana attach-post-deploy prometheus-bridge
+
 dokku config:set grafana GF_SECURITY_ADMIN_USER=<admin> GF_SECURITY_ADMIN_PASSWORD=<password> GF_SECURITY_COOKIE_SECURE=true
 
 # Apps needs to be deployed once before calling this
