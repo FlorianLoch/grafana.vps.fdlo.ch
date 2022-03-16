@@ -1,4 +1,4 @@
-FROM grafana/grafana-oss:8.4.3
+FROM grafana/grafana-oss:8.4.4
 
 USER nobody
 
